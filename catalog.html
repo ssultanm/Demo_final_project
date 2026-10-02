@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header_inner">
+            <a href="index.html" class="logo">LOGO</a>
+            <nav class="nav">
+                <a href="index.html" class="nav_link">главная</a>
+                <a href="catalog.html" class="nav_link">каталог</a>
+                <a href="#login" class="nav_link">войти</a>
+            </nav>
+            <div class="header_action">
+                <a href="#cart" class="cart-link">корзина</a>
+            </div>
+        </div>
+    </header>
+    ] <div class="container">
+        <input type="text" placeholder="search products" id="search" oninput="searchProducts()">
+        <button class="chip" onclick="sortByPrice()">сначало дешевые</button>
+        <button onclick="loadProducts()">cбросить фильтр</button>
+        <div class="products" id="products">
+
+        </div>
+    </div>
+    <script src="js/catalog.js"></script>
+</body>
+
+</html>
