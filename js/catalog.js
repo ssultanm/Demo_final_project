@@ -36,7 +36,7 @@ function productCard(product) {
 <img class="card_img" src="${product.imageUrl}"> 
 <h3 class="card_title">${product.brand} ${product.model} </h3>
 <p class="card_price">${product.price} </p>
-<button>See Details</button>
+<button onclick="(${product.id})">See Details</button>
 </div>
 
 `
@@ -53,4 +53,24 @@ function searchProducts(){
 function sortByPrice(){
     allproduct.sort((a,b)=>a.price-b.price);
     showProducts(allproduct)
+}
+
+async function loadCategories() {
+    const box =document.getElementById("categories");
+    const response=await fetch(API_URL +"/categories")
+    const categories=await response.json()
+    let html="";
+    for(const category of categories){
+html+=`<button onclick="filterByCategory(${category.id})">${category.name}</button>`
+    }
+    box.innerHTML=html
+}
+loadCategories()
+function filterByCategory(categoryId){
+    const filtered=allproduct.filter(product=>product.categoryId===categoryId)
+    showProducts(filtered)
+
+}
+function openProduct(id){
+location.href="product.html?id=" +id;
 }
