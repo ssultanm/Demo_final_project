@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+
 </head>
 
 <body>
@@ -22,20 +24,20 @@
             </div>
         </div>
     </header>
-    ] <div class="container">
-        <input type="text" placeholder="search products" id="search" oninput="searchProducts()">
-        <button class="chip" onclick="sortByPrice()">сначало дешевые</button>
-        <button onclick="loadProducts()">cбросить фильтр</button>
-        <div id="categories"></div>
-        <div class="products" id="products">
 
-        </div>
-    </div>
-    <script src="js/catalog.js"></script>
+    <main class="auth">
+        <form class="form" onsubmit="register(event)">
+            <h1>регистрация</h1>
+            <input type="text" id="name" placeholder="name">
+            <input type="text" id="surname" placeholder="surname">
+            <input type="text" id="email" placeholder="email">
+            <input type="text" id="username" placeholder="username">
+            <input type="text" id="password" placeholder="password">
+            <button>Register</button>
+            <p>уже есть аккаунт?? <a href="login.html">войти</a></p>
+        </form>
+    </main>
+    <script src="js/register.js"></script>
 </body>
 
 </html>
-
-
-
-

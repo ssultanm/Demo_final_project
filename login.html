@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
 </head>
-
 <body>
-    <header class="header">
+      <header class="header">
         <div class="container header_inner">
             <a href="index.html" class="logo">LOGO</a>
             <nav class="nav">
@@ -22,20 +21,18 @@
             </div>
         </div>
     </header>
-    ] <div class="container">
-        <input type="text" placeholder="search products" id="search" oninput="searchProducts()">
-        <button class="chip" onclick="sortByPrice()">сначало дешевые</button>
-        <button onclick="loadProducts()">cбросить фильтр</button>
-        <div id="categories"></div>
-        <div class="products" id="products">
 
-        </div>
-    </div>
-    <script src="js/catalog.js"></script>
+
+    <main class="auth">
+        <form class="form" onsubmit="login(event)">
+            <h1>вход</h1>
+            <input type="text" id="username" placeholder="username">
+            <input type="text" id="password" placeholder="password">
+            <button>login</button>
+            <p>нет аккаунта?? <a href="register.html">регистрация</a></p>
+        </form>
+    </main>
+
+<script src="js/login.js"></script>
 </body>
-
 </html>
-
-
-
-

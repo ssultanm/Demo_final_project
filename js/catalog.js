@@ -36,7 +36,7 @@ function productCard(product) {
 <img class="card_img" src="${product.imageUrl}"> 
 <h3 class="card_title">${product.brand} ${product.model} </h3>
 <p class="card_price">${product.price} </p>
-<button onclick="(${product.id})">See Details</button>
+<button onclick="openProduct(${product.id})">See Details</button>
 </div>
 
 `

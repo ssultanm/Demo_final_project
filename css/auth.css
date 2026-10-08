@@ -1,0 +1,140 @@
+/* Страницы входа и регистрации. Токены цвета берутся из style.css */
+
+.auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 16px;
+}
+
+.form {
+    width: 100%;
+    max-width: 420px;
+    padding: 48px 40px 32px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--ink);
+}
+
+.form h1 {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+    font-size: clamp(2.4rem, 9vw, 3.25rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+/* Поля — линия бланка, без рамки */
+.form input {
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 12px 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form input::placeholder {
+    color: var(--muted);
+    opacity: 1;
+}
+
+.form input:hover {
+    border-color: var(--muted);
+}
+
+.form input:focus {
+    border-color: var(--ink);
+    box-shadow: 0 1px 0 var(--ink);
+}
+
+/* Убираем жёлто-голубую заливку автозаполнения Chrome */
+.form input:-webkit-autofill {
+    -webkit-text-fill-color: var(--ink);
+    box-shadow: inset 0 0 0 100px #fff;
+}
+
+.form input:-webkit-autofill:focus {
+    box-shadow: inset 0 0 0 100px #fff, 0 1px 0 var(--ink);
+}
+
+.form button {
+    margin-top: 18px;
+    padding: 14px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    color: var(--cream);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    border-radius: 0;
+    cursor: pointer;
+    transition: color 160ms ease, background-color 160ms ease;
+}
+
+.form button:hover {
+    color: var(--ink);
+    background: transparent;
+}
+
+.form button:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+}
+
+.form button:active {
+    transform: translateY(1px);
+}
+
+.form p {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.form p a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.form p a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.form p a:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+    .auth {
+        align-items: flex-start;
+        padding: 32px 16px;
+    }
+
+    .form {
+        padding: 32px 20px 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form input,
+    .form button {
+        transition: none;
+    }
+}
